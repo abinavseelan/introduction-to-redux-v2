@@ -32,6 +32,12 @@ const store = createStore(reducer);
 console.log("========= Store ========");
 console.log(store.getState());
 
+// store.subscribe() to subscribe to store updates.
+store.subscribe(function () {
+    console.log("======== Store updated ========");
+    console.log(store.getState());
+});
+
 // store.dispatch() can be used to dispatch an action
 store.dispatch({
     type: 'ADD_ITEM_TO_CART',
@@ -49,10 +55,4 @@ store.dispatch({
         name: 'Samsung s9',
         price: 64000,
     }
-});
-
-// store.subscribe() to subscribe to store updates.
-store.subscribe(function () {
-    console.log("======== Store updated ========");
-    console.log(store.getState());
 });
