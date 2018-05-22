@@ -5,28 +5,43 @@ import './app.css';
 const amountContainer = document.getElementById('amount');
 const itemsContainer = document.getElementById('items');
 const productContainer = document.getElementById('product-container');
-
-productContainer.addEventListener('click', (event) => {
-    const { action, item } = event.target.dataset;
-
-    // dispatch add item action here
-});
+const selectedContainer = document.getElementById('selected-container');
 
 function updateItems(itemsContainer, items) {
     itemsContainer.innerHTML = '';
 
-    itemsContainer.innerHTML = items.map(item => `
+    itemsContainer.innerHTML = Object.keys(items).map(item => `
         <div>
-            ${item.name}: ${item.quantity}
+            ${item}: ${items[item]}
         </div>
     `);
 }
 
+// create action creators
 
 // create reducers
+const initialCartState = {
+    items: {
+        burger: 0,
+        pizza: 0,
+    },
+    amount: 0
+};
+
+const initialProductState = {
+    selected: 0,
+};
 
 // combine reducers
 
 // create store
 
 // subscribe to the store and call updateItems()
+
+
+productContainer.addEventListener('click', (event) => {
+    const { action, item } = event.target.dataset;
+
+    // dispatch add item action here
+    // dispatch inc count action here
+});
