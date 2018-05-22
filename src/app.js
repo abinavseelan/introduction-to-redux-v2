@@ -1,6 +1,6 @@
 import './app.css';
 
-// Import the `createStore` method
+// Import the `combineReducers` method
 import { createStore } from 'redux';
 
 const initialState = {
@@ -8,25 +8,12 @@ const initialState = {
     amount: 0,
 };
 
-// Create a reducer
-function reducer(state = initialState, action) {
-    let newState;
+// Create two reducers
 
-    if (action.type === 'ADD_ITEM_TO_CART') {
-        newState = {
-            ...state,
-            items: [...state.items, action.item],
-            amount: state.amount + action.item.price,
-        }
-    } else {
-        newState = state;
-    }
+// Combine the reducers
 
-    return newState;
-}
-
-// Create the store using the reducer
-const store = createStore(reducer);
+// Create the store using the combined reducer
+const store = createStore();
 
 // store.getState()
 console.log("========= Store ========");
@@ -38,7 +25,7 @@ store.subscribe(function () {
     console.log(store.getState());
 });
 
-// store.dispatch() can be used to dispatch an action
+// Update the actions to an action creator
 store.dispatch({
     type: 'ADD_ITEM_TO_CART',
     item: {
@@ -46,8 +33,6 @@ store.dispatch({
         price: 34000,
     }
 });
-
-// Maybe dispatch another action? :)
 
 store.dispatch({
     type: 'ADD_ITEM_TO_CART',
