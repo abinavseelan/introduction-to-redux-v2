@@ -6,3 +6,20 @@
 body {
     margin: 0;
 }
+
+.container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center-h {
+    justify-content: center;
+}
+
+.flex-center-v {
+    align-items: center;
+}
