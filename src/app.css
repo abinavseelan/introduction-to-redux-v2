@@ -12,6 +12,10 @@ body {
     width: 100vw;
 }
 
+.column {
+    flex-direction: column;
+}
+
 .flex {
     display: flex;
 }
@@ -22,4 +26,46 @@ body {
 
 .flex-center-v {
     align-items: center;
+}
+
+.listing {
+    width: 600px;
+    box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
+    border: 1px solid #eee;
+    margin: 40px 80px;
+
+    padding: 20px;
+}
+
+.listing h3 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.listing h4 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.listing button {
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 0.75em;
+    border-radius: 4px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: 0.15s all ease-out;
+}
+
+.add {
+    background-color: #FC427B;
+}
+
+.listing button:hover {
+    transform: translateY(-2px);
+}
+
+.remove {
+    background-color: #1B9CFC;
 }
