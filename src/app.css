@@ -28,26 +28,26 @@ body {
     align-items: center;
 }
 
-.listing {
+.card {
     width: 600px;
     box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
     border: 1px solid #eee;
     margin: 40px 80px;
-
+    border-radius: 4px;
     padding: 20px;
 }
 
-.listing h3 {
+.card h3 {
     font-size: 3em;
     margin: 0;
 }
 
-.listing h4 {
+.card h4 {
     font-size: 1.5em;
     margin: 0;
 }
 
-.listing button {
+.card button {
     border: none;
     padding: 10px 20px;
     color: white;
@@ -62,7 +62,7 @@ body {
     background-color: #FC427B;
 }
 
-.listing button:hover {
+.card button:hover {
     transform: translateY(-2px);
 }
 

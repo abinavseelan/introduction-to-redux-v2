@@ -10,22 +10,30 @@
 
 <body>
     <div class="container flex">
-        <div class="col">
-            <div class="listing">
+        <div class="col" id="product-container">
+            <div class="card">
                 <h3>🍕</h3>
                 <h4>Price: 300</h4>
-                <button class="add">Add</button>
-                <button class="remove">Remove</button>
+                <button class="add" data-item="pizza" data-action="add">Add</button>
+                <button class="remove" data-item="pizza" data-action="remove">Remove</button>
             </div>
-            <div class="listing">
+            <div class="card">
                 <h3>🍔</h3>
                 <h4>Price: 150</h4>
-                <button class="add">Add</button>
-                <button class="remove">Remove</button>
+                <button class="add" data-item="burger" data-action="add">Add</button>
+                <button class="remove" data-item="burger" data-action="remove">Remove</button>
             </div>
         </div>
         <div class="col">
+            <div class="card">
+                <h2>Items:</h2>
+                <div id="items">
 
+                </div>
+                <div id="amount">
+
+                </div>
+            </div>
         </div>
     </div>
 </body>
